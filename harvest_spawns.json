@@ -1,0 +1,39 @@
+{
+	"red": {
+		"stairs bottom": {
+			"position": {
+				"x": 1000,
+				"y": 2000,
+				"z": 300
+			},
+			"gaze direction": {
+				"yaw": 30,
+				"pitch": 0
+			}
+		},
+		"stairs top": {
+			"position": {
+				"x": 1000,
+				"y": 2000,
+				"z": 1300
+			},
+			"gaze direction": {
+				"yaw": 30,
+				"pitch": 0
+			}
+
+		},
+		"chimney": {
+			"position": {
+				"x": 1000,
+				"y": 2000,
+				"z": 300
+			},
+			"gaze direction": {
+				"yaw": 30,
+				"pitch": 0
+			}
+		}
+	},
+	"blu": {}
+}
