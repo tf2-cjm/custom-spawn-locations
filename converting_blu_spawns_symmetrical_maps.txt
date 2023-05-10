@@ -1,0 +1,3 @@
+given a spawn location of the form (x, y, z, yaw, pitch) on a rotationally symmetrical map, assuming this spawn is blue, then we can generate a red spawn by doing (-x, -y, z, yaw + 180, pitch).
+
+there should be a command which takes a json file with just blu ones defined and makes red spawns as well.

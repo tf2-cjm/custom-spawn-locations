@@ -1,0 +1,1 @@
+j f ;lD<Esc>/spawn\nvi"p?set\nnf ldt /"x"\nf0vp?pos\nnf ;;,ldt /"y"\nf0vp?setpos\nf llldt;/"z"\nf0vp?setang\nf3ct <Esc>/"pitch"\nf0vp?setang\nf lldt /"yaw"\nf0vpkkkkkkkhhhh

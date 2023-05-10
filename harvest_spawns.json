@@ -1,39 +1,228 @@
 {
-	"red": {
-		"stairs bottom": {
+	"blu": {
+		"spawn hay bales": {
 			"position": {
-				"x": 1000,
-				"y": 2000,
-				"z": 300
+				"x": 743.968750,
+				"y": 1240.031250,
+				"z": 146.049744
 			},
 			"gaze direction": {
-				"yaw": 30,
-				"pitch": 0
+				"yaw": 118.001968,
+				"pitch": 12.869997
 			}
 		},
-		"stairs top": {
+		"house right exit": {
 			"position": {
-				"x": 1000,
-				"y": 2000,
-				"z": 1300
+				"x": 88.031250,
+				"y": 1116.468750,
+				"z": 97.031311
 			},
 			"gaze direction": {
-				"yaw": 30,
-				"pitch": 0
+				"yaw": -43.271923,
+				"pitch": 5.279998
 			}
 
 		},
-		"chimney": {
+		"house left ammo": {
 			"position": {
-				"x": 1000,
-				"y": 2000,
-				"z": 300
+				"x": 1126.013062,
+				"y": 732.852905,
+				"z": 97.031311
 			},
 			"gaze direction": {
-				"yaw": 30,
-				"pitch": 0
+				"yaw": 179.579849,
+				"pitch": 10.824001
 			}
+		},
+		"under stairs": {
+			"position": {
+				"x": 1140.725342,
+				"y": 920.031250, 
+				"z": 97.031311
+			},
+			"gaze direction": {
+				"yaw": 91.865768, 
+				"pitch": 8.646004
+			}
+		},
+		"upstairs pack": {
+			"position": {
+				"x": 1365.468262,
+				"y": 753.394958,
+				"z": 289.031311
+			},
+			"gaze direction": {
+				"yaw": 179.351700,
+				"pitch": 13.860003
+			}	
+		},
+		"upstairs left windows": {
+			"position": {
+				"x": 1423.968750,
+				"y": 356.266907,
+				"z": 321.031311
+			},
+			"gaze direction": {
+				"yaw": -179.526260,
+				"pitch": 4.950004
+			}	
+		},
+		"chimney": {
+			"position": {
+				"x": -101.225342,
+				"y": 1179.093872,
+				"z": 381.605408
+			},
+			"gaze direction": {
+				"yaw": -81.450256,
+				"pitch": 7.854006
+			}	
+		},
+		"left side main roof": {
+			"position": {
+				"x": 727.799255,
+				"y": 1401.296021,
+				"z": 287.276062
+			},
+			"gaze direction": {
+				"yaw": -167.616943,
+				"pitch": 11.748008
+			}	
+		},
+		"behind health hut": {
+			"position": {
+				"x": -1127.779175,
+				"y": 1560.203857,
+				"z": 142.825119
+			},
+			"gaze direction": {
+				"yaw": -62.148205,
+				"pitch": 9.702000
+			}	
+		},
+		"truck": {
+			"position": {
+				"x": 1435.968750,
+				"y": -75.362953,
+				"z": 63.523674
+			},
+			"gaze direction": {
+				"yaw": -179.724350,
+				"pitch": 2.772001
+			}	
+		},
+
+		"barrel left side point": {
+			"position": {
+				"x": 970.445801,
+				"y": 229.887787,
+				"z": 87.184860
+			},
+			"gaze direction": {
+				"yaw": -87.984352,
+				"pitch": 8.052001
+			}	
+		},
+		"left hall exit": {
+			"position": {
+				"x": 1477.795776,
+				"y": 1363.692261,
+				"z": 97.031311
+			},
+			"gaze direction": {
+				"yaw": -89.010345,
+				"pitch": 3.300004
+			}	
+		},
+		"left spawn roof": {
+			"position": {
+				"x": 974.663025,
+				"y": 1649.569458,
+				"z": 311.176514
+			},
+			"gaze direction": {
+				"yaw": -179.958405,
+				"pitch": 11.946003
+			}	
+		},
+		"right spawn pumpkin": {
+			"position": {
+				"x": -205.922943,
+				"y": 1675.570190,
+				"z": 119.704849
+			},
+			"gaze direction": {
+				"yaw": -91.386307,
+				"pitch": 2.639989
+			}	
+		},
+		"health_hut": {
+			"position": {
+				"x": -896.507874,
+				"y": 1138.014648,
+				"z": 145.031311
+			},
+			"gaze direction": {
+				"yaw": -87.492401,
+				"pitch": 4.817989
+			}	
+		},
+
+		"behind point": {
+			"position": {
+				"x": -29.968752,
+				"y": 216.031250,
+				"z": 109.370384
+			},
+			"gaze direction": {
+				"yaw": 60.677525,
+				"pitch": 5.543990
+			}	
+		},
+		"concrete block right side point": {
+			"position": {
+				"x": -652.071472,
+				"y": 192.215561,
+				"z": 72.823402
+			},
+			"gaze direction": {
+				"yaw": -39.708595,
+				"pitch": 3.827991
+			}	
+		},
+		"inside point hay bales": {
+			"position": {
+				"x": -284.419403,
+				"y": 142.999969,
+				"z": 122.083900
+			},
+			"gaze direction": {
+				"yaw": -37.596577,
+				"pitch": 30.887999
+			}	
+		},
+		"left porch": {
+			"position": {
+				"x": 743.968750,
+				"y": 366.031250,
+				"z": 97.031311
+			},
+			"gaze direction": {
+				"yaw": 138.065353,
+				"pitch": 7.458008
+			}	
+		},
+		"point roof": {
+			"position": {
+				"x": -297.227997,
+				"y": 195.961105,
+				"z": 303.034454
+			},
+			"gaze direction": {
+				"yaw": -44.064892,
+				"pitch": 12.078009
+			}	
 		}
 	},
-	"blu": {}
+	"red": {}
 }

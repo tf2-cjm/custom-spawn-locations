@@ -1,0 +1,11 @@
+		"spawn name": {
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"gaze direction": {
+				"yaw": 0,
+				"pitch": 0
+			}	
+		},
