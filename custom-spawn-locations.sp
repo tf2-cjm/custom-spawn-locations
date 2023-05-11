@@ -25,8 +25,7 @@ public void OnPluginStart()
 	char path[256];
     BuildPath(Path_SM, path, sizeof(path), "configs/custom-spawn-locations/harvest_spawns.json");
 	
-	spawnConfig = json_read_from_file(path)
-	
+	spawnConfig = json_read_from_file(path);
 
 	HookEvent("player_spawn", Event_PlayerSpawn, EventHookMode_Pre);
 	
@@ -68,13 +67,21 @@ public Action AttemptToSpawnPlayer(Handle timer, any clientid) {
 			teamColor = "blu"
 		}
 	} else {
-		teamColor = "red"
+		teamColor = "blu"
 	}
 	
-	JSON_Object teamSpawns = spawnConfig.GetObject(teamColor)
+	JSON_Object teamSpawns = spawnConfig.GetObject(teamColor);
 	
+	RandomlySelectTeamSpawnAndAttemptToSpawnPlayer(teamSpawns, clientid);
+		
+	return Plugin_Continue;
+}
 
-	
+public RandomlySelectTeamSpawnAndAttemptToSpawnPlayer(JSON_Object teamSpawns, any clientid) {
+	/*
+	 * description:
+	 * 	randomly selects a spawn from the associated json spawn config for this map and attemps to spawn the player
+	 */
 	int length = teamSpawns.Length;
 	int key_length = 0;
 	
@@ -97,20 +104,40 @@ public Action AttemptToSpawnPlayer(Handle timer, any clientid) {
 			
 			JSON_Object position = spawn.GetObject("position");
 			
-			int x = position.GetInt("x");
-			int y = position.GetInt("y");
-			int z = position.GetInt("z");
+			float x = position.GetFloat("x");
+			float y = position.GetFloat("y");
+			float z = position.GetFloat("z");
 			
 			JSON_Object gazeDirection = spawn.GetObject("gaze direction");
-			int yaw = spawn.GetInt("yaw");
-			int pitch = spawn.GetInt("pitch");
+			float yaw = gazeDirection.GetFloat("yaw");
+			float pitch = gazeDirection.GetFloat("pitch");
 			
 			PrintToServer("about to respawn %s, at (%d, %d, %d) gazing at (%d, %d)", key, x, y, z, yaw, pitch);
-				
+			
+			int client = GetClientOfUserId(clientid);
+			
+			float origin[3];
+			origin[0] = x;
+			origin[1] = y;
+			origin[2] = z;
+			
+			float angles[3];
+			angles[0] = pitch;
+			angles[1] = yaw;
+			angles[2] = 0.0;
+			
+			bool spawnFree = !PlayersNearSpawn(origin);
+			
+			if (spawnFree) {
+				TeleportEntity(
+					client,
+					origin,
+					angles,
+					view_as<float>({0.0, 0.0, 0.0})
+				);
+			}	
 		}
 	}
-		
-	return Plugin_Continue;
 }
 
 //public char[] GetRandomTeamColor() {
@@ -123,7 +150,7 @@ public Action AttemptToSpawnPlayer(Handle timer, any clientid) {
 
 public bool PlayersNearSpawn(float spawnLocation[3]) {
 	// hammer units: https://developer.valvesoftware.com/wiki/TF2/Team_Fortress_2_Mapper%27s_Reference
-	float safeDist = 100; 
+	int safeDist = 100; 
 		
 	for (new i = 1; i <= MaxClients; i++) {
 		if (IsClientInGame(i)) {
